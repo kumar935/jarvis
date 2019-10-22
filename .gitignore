@@ -1,0 +1,16 @@
+node_modules/
+.eslintcache
+coverage/
+.nyc_output
+.DS_Store
+public/*bundle*
+*.map
+*.bundle.js
+_site/
+.sass-cache/
+*.iml
+.idea/
+dist
+yarn-error.log
+lerna-debug.log
+.vscode
