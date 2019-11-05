@@ -1,0 +1,12 @@
+{
+  "startUrl": "http://localhost:5001/branch/app/customer/register?identityInt=234&identityType=198",
+  "XPathValArr": [
+    {
+      "type": "select",
+      "value": "indian",
+      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[2]/DIV[2]/SECTION[2]/DIV[1]/DIV[2]/DIV[1]/DIV[4]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/INPUT[1]",
+      "containerXPath": "/html/body/DIV[1]/DIV[1]/DIV[2]/DIV[2]/SECTION[2]/DIV[1]/DIV[2]/DIV[1]/DIV[4]/DIV[1]",
+      "event": "input"
+    }
+  ]
+}
