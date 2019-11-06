@@ -20,6 +20,7 @@
       "event": "input"
     },
     {
+      "waitUntil": 2000,
       "xpath": "/html/body/DIV[1]/DIV[2]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/DIV[2]/DIV[1]",
       "event": "click"
     },

@@ -1,0 +1,111 @@
+{
+    "startUrl": "https://appd3-kwt.amxremit.com/login",
+    "XPathValArr": [
+     {
+      "type": "text",
+      "value": "289072104474",
+      "label": "INPUT",
+      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/INPUT[1]",
+      "event": "input"
+     },
+     {
+      "type": "text",
+      "value": "Amx@1234",
+      "label": "INPUT",
+      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/INPUT[2]",
+      "event": "input"
+     },
+     {
+      "type": "submit",
+      "value": "",
+      "label": "button ripple",
+      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[3]/BUTTON[1]",
+      "event": "click"
+     },
+     {
+      "waitUntil": 1500,
+      "label": "title",
+      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[3]/DIV[1]/DIV[1]/A[3]/SPAN[2]",
+      "event": "click"
+     },
+     {
+        "waitUntil": 1500,
+      "label": "icon-bar",
+      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[3]/DIV[1]/DIV[2]/DIV[1]/LABEL[1]/DIV[1]/DIV[2]",
+      "event": "click"
+     },
+     {
+        "waitUntil": 1500,
+      "type": "checkbox",
+      "value": "on",
+      "label": "INPUT",
+      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[3]/DIV[1]/DIV[2]/DIV[1]/LABEL[1]/INPUT[1]",
+      "event": "click"
+     },
+     {
+      "type": "text",
+      "value": "test",
+      "label": "INPUT",
+      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/INPUT[2]",
+      "event": "input"
+     },
+     {
+      "type": "submit",
+      "value": "",
+      "label": "button ripple",
+      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[3]/BUTTON[2]",
+      "event": "click"
+     },
+     {
+      "type": "text",
+      "value": "100",
+      "label": "INPUT",
+      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[3]/DIV[1]/DIV[2]/DIV[2]/DIV[2]/INPUT[1]",
+      "event": "input"
+     },
+     {
+      "label": "Select is-focused is-open is-searchable Select--single",
+      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[3]/DIV[1]/DIV[2]/DIV[2]/DIV[6]/DIV[1]",
+      "event": "click"
+     },
+     {
+      "type": "text",
+      "value": "TRADE",
+      "label": "INPUT",
+      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[3]/DIV[1]/DIV[2]/DIV[2]/DIV[6]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/INPUT[1]",
+      "event": "input"
+     },
+     {
+      "type": "text",
+      "value": "",
+      "label": "INPUT",
+      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[3]/DIV[1]/DIV[2]/DIV[2]/DIV[6]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/INPUT[1]"
+     },
+     {
+      "label": "checkbox",
+      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[3]/DIV[1]/DIV[2]/DIV[3]/DIV[9]/LABEL[1]/LABEL[1]",
+      "event": "click"
+     },
+     {
+      "type": "checkbox",
+      "value": "on",
+      "label": "termsCheck",
+      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[3]/DIV[1]/DIV[2]/DIV[3]/DIV[9]/LABEL[1]/INPUT[1]",
+      "event": "click"
+     },
+     {
+      "type": "submit",
+      "value": "",
+      "label": "button ripple",
+      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[3]/DIV[1]/DIV[2]/DIV[5]/BUTTON[1]",
+      "event": "click"
+     },
+     {
+      "type": "submit",
+      "value": "",
+      "label": "button ripple",
+      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[3]/DIV[1]/DIV[2]/DIV[3]/BUTTON[1]",
+      "event": "click"
+     }
+    ]
+   }

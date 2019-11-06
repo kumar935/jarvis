@@ -61,45 +61,26 @@ function logTitle() {
   });
 }
 
-async function reactStuff() {
-  let node = browser.findElement(By.name("Notification title"));
-  let node2 = await browser.findElement({
-    className: "btn btn-success pull-right"
-  });
-  let notifTitle = await browser.findElement({
-    xpath: '//*[@id="app"]/div/div/div[1]/section[2]/div/div[2]/div[1]/input'
+async function actions() {
+  let notifTitleInput = await browser.findElement({
+    xpath: "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[2]/SECTION[2]/DIV[1]/DIV[2]/DIV[1]/INPUT[1]"
   });
   let notifTxtArea = await browser.findElement({
-    xpath: '//*[@id="app"]/div/div/div[1]/section[2]/div/div[2]/div[2]/textarea'
+    xpath: "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[2]/SECTION[2]/DIV[1]/DIV[2]/DIV[2]/TEXTAREA[1]"
   });
-  let natSelectExt = await browser.findElement({
-    xpath: '//*[@id="app"]/div/div/div[1]/section[2]/div/div[2]/div[4]/div'
-  });
-  let natSelectTxtInput = await browser.findElement({
+  let submitBtn = await browser.findElement({
     xpath:
-      "/html/body/div/div/div/div[1]/section[2]/div/div[2]/div[4]/div/div[1]/div[1]/div/div/input"
+    "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[2]/SECTION[2]/DIV[1]/DIV[3]/BUTTON[1]"
   });
-
-  await notifTitle.sendKeys("asdf");
-  await notifTxtArea.sendKeys("asdfasdf");
-  await natSelectExt.click();
-  await natSelectTxtInput.sendKeys("OTHERS");
-  await natSelectTxtInput.sendKeys(Key.ENTER);
-  console.log("logging node2: ", node2);
-  // node2.click();
-
-  // console.log("logging node: ", node2);
-  // node2.click();
-  // let txt = node2.getText();
-  // console.log('logging txt: ', txt);
-  // ReactTestUtils.Simulate.change(ReactDom.findDOMNode(node), {target: {value: "bruh"}});
-  // ReactTestUtils.Simulate.click(ReactDom.findDOMNode(node2));
+  await notifTitleInput.sendKeys("test1");
+  await notifTxtArea.sendKeys("test2");
+  await submitBtn.click();
 }
 
 browser
   .get(serverUri)
   .then(logTitle)
-  .then(reactStuff)
+  .then(actions)
   .then(title => {
     assert.strictEqual(title, appTitle);
     console.log("2nd then", title, appTitle);

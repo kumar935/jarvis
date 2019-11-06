@@ -43,6 +43,23 @@ async function actions({ XPathValArr }) {
       );
     }
 
+    if (ele.waitUntilElement) {
+      await new Promise(resolve => {
+        let {duration, ...waitUntilConfig } = ele.waitUntilElement;
+        browserMain.wait(until.elementLocated(waitUntilConfig, duration || 10000)).then(el => {
+          resolve();
+        }).catch(err => {
+          resolve();
+          console.error('error in waitUntilElement: ', err);
+        })
+      });
+      await new Promise(resolve =>
+        setTimeout(() => {
+          resolve();
+        }, 1000)
+      );
+    }
+
     //select
     if (ele.type == "select") {
       await setSelectVal(ele);
@@ -64,23 +81,30 @@ async function actions({ XPathValArr }) {
         await browserMain.findElement({ xpath: ele.xpath }).click();
       } catch (error) {
         console.error("error in click event: ", error);
-        console.error('additional info label: ', ele.label, " value: ", ele.value, " event: ", ele.event);
+        console.error(
+          "additional info label: ",
+          ele.label,
+          " value: ",
+          ele.value,
+          " event: ",
+          ele.event
+        );
       }
     }
   }
 }
 
-module.exports.runFlow = ({browser, XPathValArr, startUrl}) => {
+module.exports.runFlow = ({ browser, XPathValArr, startUrl }) => {
   browser = browser || browserMain;
   let url = startUrl || defaultUrl;
+  browser.manage().window().maximize();
   return browser
     .get(url)
     .then(async () => {
-        await actions({XPathValArr});
-        return browser;
+      await actions({ XPathValArr });
+      return browser;
     })
     .catch(err => {
       console.error(err);
     });
-  
-}
+};

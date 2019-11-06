@@ -1,34 +1,12 @@
 {
-  "startUrl": "https://branchd3-kwt.amxremit.com/branch#test",
+  "startUrl": "https://branchd3-kwt.amxremit.com/branch/customer",
   "XPathValArr": [
-    {
-      "type": "button",
-      "value": "D",
-      "xpath": "/html/body/INPUT[1]",
-      "event": "click"
-    },
-    {
-      "type": "text",
-      "value": "355666",
-      "xpath": "/html/body/DIV[1]/DIV[2]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/INPUT[1]",
-      "event": "input"
-    },
-    {
-      "type": "text",
-      "value": "280060116493",
-      "xpath": "/html/body/DIV[1]/DIV[2]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/DIV[1]/INPUT[1]",
-      "event": "input"
-    },
-    {
-      "xpath": "/html/body/DIV[1]/DIV[2]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/DIV[2]/DIV[1]",
-      "event": "click"
-    },
-
     {
       "waitUntilElement": {
         "id": "app"
       },
       "type": "",
+      "label": "A",
       "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/ASIDE[1]/SECTION[1]/UL[1]/LI[5]/A[1]",
       "event": "click"
     },

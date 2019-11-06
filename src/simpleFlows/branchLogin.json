@@ -1,0 +1,27 @@
+{
+  "startUrl": "https://branchd3-kwt.amxremit.com/branch#test",
+  "XPathValArr": [
+    {
+      "type": "button",
+      "value": "D",
+      "xpath": "/html/body/INPUT[1]",
+      "event": "click"
+    },
+    {
+      "type": "text",
+      "value": "355666",
+      "xpath": "/html/body/DIV[1]/DIV[2]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/INPUT[1]",
+      "event": "input"
+    },
+    {
+      "type": "text",
+      "value": "280060116493",
+      "xpath": "/html/body/DIV[1]/DIV[2]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/DIV[1]/INPUT[1]",
+      "event": "input"
+    },
+    {
+      "xpath": "/html/body/DIV[1]/DIV[2]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/DIV[2]/DIV[1]",
+      "event": "click"
+    }
+  ]
+}
