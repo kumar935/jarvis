@@ -22,7 +22,7 @@ node based selenium setup for running UI flows
 ### Usage
 
 - before running a flow, check the flows inside the `src/flows` folder. Check the `serverUri` variable which contains the url to the web app where the flow will run. Make sure it is a valid url that is working on your system and you are logged in.
-- to run a flow, for example `cust_reg` use the command: `npm run flow cust_reg`.
+- to run a flow, for example `generic_flow` use the command: `npm run flow generic_flow`.
 - to run a simple flow from json files for example `branchLogin` use: `npm run simpleFlow branchLogin`.
 
 
