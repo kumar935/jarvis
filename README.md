@@ -26,3 +26,11 @@ node based selenium setup for running UI flows
 - to run a simple flow from json files for example `branchLogin` use: `npm run simpleFlow branchLogin`.
 
 
+### Useful Links
+
+- useful for By.js: https://stackoverflow.com/questions/36869816/what-is-by-js-locator-for-in-protractor-webdriverjs
+- hover https://gist.github.com/umaar/9051143
+- selenium webdriver doc: https://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/index.html
+- several ways to set text in the question itself and answer: https://stackoverflow.com/questions/25583641/set-value-of-input-instead-of-sendkeys-selenium-webdriver-nodejs
+
+
