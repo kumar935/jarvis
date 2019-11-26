@@ -101,6 +101,11 @@ module.exports.runFlow = ({ browser, XPathValArr, startUrl }) => {
   return browser
     .get(url)
     .then(async () => {
+      try {
+        browser.executeScript(`window.localStorage.setItem("debugConfig", '{"remoteJsUrl":"http://localhost:5001","dummyApi":false}')`);  
+      } catch (error) {
+        console.error('error in setting loc storage: ', error);
+      }
       await actions({ XPathValArr });
       return browser;
     })
