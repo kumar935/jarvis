@@ -91,6 +91,14 @@ async function actions({ XPathValArr }) {
         );
       }
     }
+
+    if(ele.event == "link") {
+      try {
+        await browserMain.navigate().to(ele.value);
+      } catch (error) {
+        console.error('error in link event: ', error);
+      }
+    }
   }
 }
 
@@ -102,7 +110,7 @@ module.exports.runFlow = ({ browser, XPathValArr, startUrl }) => {
     .get(url)
     .then(async () => {
       try {
-        browser.executeScript(`window.localStorage.setItem("debugConfig", '{"remoteJsUrl":"http://localhost:5001","dummyApi":false}')`);  
+        // browser.executeScript(`window.localStorage.setItem("debugConfig", '{"remoteJsUrl":"http://localhost:5001","dummyApi":false}')`);  
       } catch (error) {
         console.error('error in setting loc storage: ', error);
       }
