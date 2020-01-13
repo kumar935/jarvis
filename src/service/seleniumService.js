@@ -17,6 +17,7 @@ async function setSelectVal({ containerXPath, xpath, value }) {
       await selectExt.click();
       let selectInt = await browserMain.findElement({ xpath: xpath });
       await selectInt.sendKeys(value);
+      await selectInt.sendKeys(Key.DOWN);
       await selectInt.sendKeys(Key.ENTER);
     }
   } catch (error) {

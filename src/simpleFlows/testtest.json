@@ -1,54 +1,12 @@
 {
-    "startUrl": "https://appd3-kwt.amxremit.com/login",
-    "XPathValArr": [
-     {
-      "type": "text",
-      "value": "284052306594",
-      "label": "INPUT",
-      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/INPUT[1]",
-      "event": "input"
-     },
-     {
-      "type": "text",
-      "value": "Amx@1234",
-      "label": "INPUT",
-      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/INPUT[2]",
-      "event": "input"
-     },
-     {
-      "type": "submit",
-      "value": "",
-      "label": "button ripple",
-      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[3]/BUTTON[1]",
-      "event": "click"
-     },
-     {
-      "waitUntil": 2500,  
-      "value": "https://appd3-kwt.amxremit.com/app/landing/beneficiaries",
-      "label": "svgicons svgicons-beneficiaries ripple",
-      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[3]/DIV[1]/DIV[1]/A[3]/SPAN[1]",
-      "event": "link"
-     },
-     {
-    "waitUntil": 2500, 
-      "value": "https://appd3-kwt.amxremit.com/app/add-bene",
-      "label": "SPAN",
-      "xpath": "/DIV[1]/DIV[2]/DIV[1]/A[1]/SPAN[1]",
-      "event": "link"
-     },
-     {
-      "type": "text",
-      "value": "test",
-      "label": "INPUT",
-      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/INPUT[2]",
-      "event": "input"
-     },
-     {
-      "type": "submit",
-      "value": "",
-      "label": "button ripple",
-      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[3]/BUTTON[2]",
-      "event": "click"
-     }
-    ]
+  "startUrl": "http://localhost:5001/branch/app/customer/register?identityInt=123123&identityType=198",
+  "XPathValArr": [
+   {
+    "type": "select",
+    "value": "94",
+    "label": "select-Nationality",
+    "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[3]/SECTION[2]/DIV[1]/DIV[2]/DIV[1]/DIV[4]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/INPUT[1]",
+    "containerXPath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[3]/SECTION[2]/DIV[1]/DIV[2]/DIV[1]/DIV[4]/DIV[1]"
    }
+  ]
+ }
