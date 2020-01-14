@@ -66,7 +66,6 @@
       "event": "click"
      },
      {
-      "waitUntil": 1500,
       "type": "submit",
       "value": "",
       "label": "button ripple",
@@ -74,7 +73,7 @@
       "event": "click"
      },
      {
-      "waitUntil": 2500,
+      "waitUntil": 1500,
       "label": "Select-placeholder",
       "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[3]/DIV[3]/DIV[2]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]",
       "event": "click"
@@ -109,7 +108,7 @@
      {
       "waitUntil": 2000,
       "type": "text",
-      "value": "TestC",
+      "value": "TestE",
       "label": "INPUT",
       "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[3]/DIV[3]/DIV[2]/DIV[1]/DIV[3]/DIV[1]/DIV[1]/INPUT[1]",
       "event": "input"
