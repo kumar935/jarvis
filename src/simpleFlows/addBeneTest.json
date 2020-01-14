@@ -1,0 +1,184 @@
+{
+    "startUrl": "https://appd2-kwt.amxremit.com/login",
+    "XPathValArr": [
+     {
+      "type": "text",
+      "value": "289072104474",
+      "label": "INPUT",
+      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/INPUT[1]",
+      "event": "input"
+     },
+     {
+      "type": "text",
+      "value": "Amx@1234",
+      "label": "INPUT",
+      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/INPUT[1]",
+      "event": "input"
+     },
+     {
+      "type": "submit",
+      "value": "",
+      "label": "button ripple",
+      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[3]/BUTTON[1]",
+      "event": "click"
+     },
+     {
+      "waitUntil": 1500,
+      "value": "https://appd2-kwt.amxremit.com/app/landing/beneficiaries",
+      "label": "svgicons svgicons-beneficiaries ripple",
+      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[3]/DIV[1]/DIV[1]/A[3]/SPAN[1]",
+      "event": "link"
+     },
+     {
+      "waitUntil": 1500,   
+      "value": "https://appd2-kwt.amxremit.com/app/add-bene",
+      "label": "SPAN",
+      "xpath": "/DIV[1]/DIV[2]/DIV[1]/A[1]/SPAN[1]",
+      "event": "link"
+     },
+     {
+      "waitUntil": 1500,   
+      "type": "text",
+      "value": "test",
+      "label": "INPUT",
+      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/INPUT[1]",
+      "event": "input"
+     },
+     {
+      "type": "submit",
+      "value": "",
+      "label": "button ripple",
+      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[3]/BUTTON[2]",
+      "event": "click"
+     },
+     {
+      "waitUntil": 1500,
+      "label": "SPAN",
+      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[3]/DIV[3]/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/LABEL[3]/SPAN[1]",
+      "event": "click"
+     },
+
+     {
+      "type": "radio",
+      "value": "1",
+      "label": "INPUT",
+      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[3]/DIV[3]/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/LABEL[3]/INPUT[1]",
+      "event": "click"
+     },
+     {
+      "waitUntil": 1500,
+      "type": "submit",
+      "value": "",
+      "label": "button ripple",
+      "xpath": "/html/body/div/div/div[1]/div/div/div[3]/div[3]/div[2]/div/div[3]/button[2]",
+      "event": "click"
+     },
+     {
+      "waitUntil": 2500,
+      "label": "Select-placeholder",
+      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[3]/DIV[3]/DIV[2]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]",
+      "event": "click"
+     },
+     {
+      "type": "select",
+      "value": "2520",
+      "label": "select-Service Provider",
+      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[3]/DIV[3]/DIV[2]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/INPUT[1]",
+      "containerXPath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[3]/DIV[3]/DIV[2]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]"
+     },
+     {
+      "waitUntil": 2000,
+      "label": "Select is-focused is-open is-searchable Select--single",
+      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[3]/DIV[3]/DIV[2]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[4]/DIV[1]",
+      "event": "click"
+     },
+     {      
+      "type": "select",
+      "value": "305785",
+      "label": "select-Agent Branch",
+      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[3]/DIV[3]/DIV[2]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[4]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/INPUT[1]",
+      "containerXPath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[3]/DIV[3]/DIV[2]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[4]"
+     },
+     {
+      "type": "submit",
+      "value": "",
+      "label": "button ripple",
+      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[3]/DIV[3]/DIV[2]/DIV[1]/DIV[4]/BUTTON[4]",
+      "event": "click"
+     },
+     {
+      "waitUntil": 2000,
+      "type": "text",
+      "value": "TestC",
+      "label": "INPUT",
+      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[3]/DIV[3]/DIV[2]/DIV[1]/DIV[3]/DIV[1]/DIV[1]/INPUT[1]",
+      "event": "input"
+     },
+     {
+      "type": "text",
+      "value": "Test",
+      "label": "INPUT",
+      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[3]/DIV[3]/DIV[2]/DIV[1]/DIV[3]/DIV[2]/DIV[1]/INPUT[1]",
+      "event": "input"
+     },
+     {
+      "label": "Select is-focused is-open is-searchable Select--single",
+      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[3]/DIV[3]/DIV[2]/DIV[1]/DIV[4]/DIV[1]/DIV[1]/DIV[1]",
+      "event": "click"
+     },
+     {
+      "type": "select",
+      "value": "3",
+      "label": "select-Relationship",
+      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[3]/DIV[3]/DIV[2]/DIV[1]/DIV[4]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/INPUT[1]",
+      "containerXPath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[3]/DIV[3]/DIV[2]/DIV[1]/DIV[4]/DIV[1]/DIV[1]"
+     },
+     {
+      "label": "Select-placeholder",
+      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[3]/DIV[3]/DIV[2]/DIV[1]/DIV[6]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]",
+      "event": "click"
+     },
+     {
+      "type": "select",
+      "value": "658",
+      "label": "select-State",
+      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[3]/DIV[3]/DIV[2]/DIV[1]/DIV[6]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/INPUT[1]",
+      "containerXPath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[3]/DIV[3]/DIV[2]/DIV[1]/DIV[6]/DIV[2]/DIV[1]"
+     },
+     {      
+      "waitUntil": 1000,
+      "label": "Select is-focused is-open is-searchable Select--single",
+      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[3]/DIV[3]/DIV[2]/DIV[1]/DIV[7]/DIV[1]/DIV[1]/DIV[1]",
+      "event": "click"
+     },
+     {
+      "type": "select",
+      "value": "7661",
+      "label": "select-District",
+      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[3]/DIV[3]/DIV[2]/DIV[1]/DIV[7]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/INPUT[1]",
+      "containerXPath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[3]/DIV[3]/DIV[2]/DIV[1]/DIV[7]/DIV[1]/DIV[1]"
+     },
+     {
+      "type": "text",
+      "value": "9876549879",
+      "label": "INPUT",
+      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[3]/DIV[3]/DIV[2]/DIV[1]/DIV[7]/DIV[2]/DIV[1]/DIV[2]/INPUT[1]",
+      "event": "input"
+     },
+     {
+      "type": "submit",
+      "value": "",
+      "label": "button ripple",
+      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[3]/DIV[3]/DIV[2]/DIV[1]/DIV[9]/BUTTON[4]",
+      "event": "click"
+     },
+     {
+      "waitUntil": 20000,      
+      "type": "submit",
+      "value": "",
+      "label": "button ripple",
+      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[3]/BUTTON[3]",
+      "event": "click"
+    }
+]
+}
