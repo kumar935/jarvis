@@ -1,5 +1,5 @@
 {
-  "startUrl": "https://branchd3-kwt.amxremit.com/branch#test",
+  "startUrl": "https://appb-kwt.almullaexchange.com/branch#test",
   "XPathValArr": [
     {
       "type": "button",
@@ -9,13 +9,13 @@
     },
     {
       "type": "text",
-      "value": "355666",
+      "value": "400594",
       "xpath": "/html/body/DIV[1]/DIV[2]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/INPUT[1]",
       "event": "input"
     },
     {
       "type": "text",
-      "value": "280060116493",
+      "value": "287090105615",
       "xpath": "/html/body/DIV[1]/DIV[2]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/DIV[1]/INPUT[1]",
       "event": "input"
     },
