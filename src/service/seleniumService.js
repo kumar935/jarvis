@@ -5,9 +5,16 @@ var chromedriver = require("chromedriver");
 chrome.setDefaultService(new chrome.ServiceBuilder(chromedriver.path).build());
 require("geckodriver");
 const defaultUrl = "https://appd3-kwt.amxremit.com/login";
+
+// https://stackoverflow.com/questions/32196788/webdriverjs-driver-manage-logs-getbrowser-returns-empty-array
+var pref = new webdriver.logging.Preferences();
+pref.setLevel('browser', webdriver.logging.Level.ALL); 
+pref.setLevel('driver', webdriver.logging.Level.ALL); 
+
 var browserMain = new webdriver.Builder()
   .usingServer()
   .withCapabilities({ browserName: "chrome" })
+  .setLoggingPrefs(pref)
   .build();
 
 async function setSelectVal({ containerXPath, xpath, value }) {
@@ -106,6 +113,9 @@ async function actions({ XPathValArr }) {
 module.exports.runFlow = ({ browser, XPathValArr, startUrl }) => {
   browser = browser || browserMain;
   let url = startUrl || defaultUrl;
+  browser.manage().logs().get('driver').then(function(logs){
+    console.log(logs);
+  });
   browser.manage().window().maximize();
   return browser
     .get(url)
