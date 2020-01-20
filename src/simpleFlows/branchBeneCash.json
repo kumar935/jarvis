@@ -29,6 +29,7 @@
       "waitUntilElement": {
           "id": "app"
        },
+       "waitUntil": 500,
       "label": "SPAN",
       "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/ASIDE[1]/SECTION[1]/UL[1]/LI[4]/A[1]/SPAN[1]",
       "event": "click"
@@ -48,7 +49,7 @@
       "event": "click"
      },
      {
-      "waitUntil": 2000,
+      "waitUntil": 3000,
       "label": "SPAN",
       "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/ASIDE[1]/SECTION[1]/UL[1]/LI[4]/UL[1]/LI[4]/A[1]/SPAN[1]",
       "event": "click"
@@ -59,7 +60,7 @@
       "event": "click"
      },
      {
-      "waitUntil": 500,
+      "waitUntil": 1500,
       "type": "select",
       "value": "004",
       "label": "select-Country",
@@ -72,7 +73,7 @@
       "event": "click"
      },
      {
-      "waitUntil": 500,
+      "waitUntil": 1000,
       "type": "select",
       "value": "1",
       "label": "select-Channel",
@@ -85,7 +86,7 @@
       "event": "click"
      },
      {
-      "waitUntil": 500,
+      "waitUntil": 1000,
       "type": "select",
       "value": "4",
       "label": "select-Currency",
@@ -139,7 +140,7 @@
         },
         {
         "type": "text",
-        "value": "testE",
+        "value": "testH",
         "label": "First Name",
         "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[2]/SECTION[2]/DIV[2]/DIV[2]/DIV[2]/DIV[2]/DIV[2]/DIV[1]/INPUT[1]",
         "event": "input"
@@ -216,7 +217,7 @@
       "event": "click"
      },
      {
-        "waitUntil": 3500,
+        "waitUntil": 5500,
         "type": "submit",
         "value": "",
         "label": "btn btn-primary",
