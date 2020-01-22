@@ -119,7 +119,8 @@
     },
     {
     "label": "fa fa-search fa-stack-1x",
-    "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[2]/SECTION[2]/DIV[2]/DIV[1]/DIV[2]/DIV[1]/DIV[3]/DIV[1]/LABEL[2]/SPAN[1]/I[1]",
+    "xpath": "/html/body/div/div/div/div[2]/section[2]/div[2]/div[1]/div[2]/div[1]/div[2]/div/label[2]/span/i",
+    
     "event": "click"
     },
     {

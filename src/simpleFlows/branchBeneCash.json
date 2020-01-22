@@ -21,7 +21,6 @@
       "event": "input"
      },
      {
-      "waitUntil": 500,
       "xpath": "/html/body/DIV[1]/DIV[2]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/DIV[2]/DIV[1]",
       "event": "click"
      },
@@ -49,31 +48,36 @@
       "event": "click"
      },
      {
-      "waitUntil": 3000,
+      "waitUntilElement": {
+         "id": "cw_repeat_remittance"
+      },
       "label": "SPAN",
       "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/ASIDE[1]/SECTION[1]/UL[1]/LI[4]/UL[1]/LI[4]/A[1]/SPAN[1]",
       "event": "click"
+     },
+     {
+      "waitUntilApi": {
+        "api" : "bene/country/list"
+      }
      },
      {
       "label": "css-1hwfws3",
       "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[2]/SECTION[2]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]",
       "event": "click"
      },
-     {
-      "waitUntil": 1500,
+     { 
       "type": "select",
       "value": "004",
       "label": "select-Country",
       "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[2]/SECTION[2]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/INPUT[1]",
       "containerXPath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[2]/SECTION[2]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]"
      },
-     {
+     {      
       "label": "css-151xaom-placeholder",
       "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[2]/SECTION[2]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]",
       "event": "click"
      },
      {
-      "waitUntil": 1000,
       "type": "select",
       "value": "1",
       "label": "select-Channel",
@@ -81,14 +85,18 @@
       "containerXPath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[2]/SECTION[2]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/DIV[1]"
      },
      {
+      "waitUntilApi": {
+        "api" : "bene/currency/list"
+      }
+     },
+     {
       "label": "css-1hwfws3",
       "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[2]/SECTION[2]/DIV[1]/DIV[2]/DIV[1]/DIV[3]/DIV[1]/DIV[1]/DIV[1]/DIV[1]",
       "event": "click"
      },
      {
-      "waitUntil": 1000,
       "type": "select",
-      "value": "4",
+      "value": "004",
       "label": "select-Currency",
       "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[2]/SECTION[2]/DIV[1]/DIV[2]/DIV[1]/DIV[3]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/INPUT[1]",
       "containerXPath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[2]/SECTION[2]/DIV[1]/DIV[2]/DIV[1]/DIV[3]/DIV[1]"
@@ -101,128 +109,124 @@
       "event": "click"
      },
      {
+      "waitUntilApi": {
+        "api" : "bene/service_provider/list"
+      }
+     },
+     {
       "label": "css-1hwfws3",
       "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[2]/SECTION[2]/DIV[2]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]",
       "event": "click"
      },
-        {
-        "waitUntil": 500,
-        "type": "select",
-        "value": "2520",
-        "label": "select-Service Provider",
-        "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[2]/SECTION[2]/DIV[2]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/INPUT[1]",
-        "containerXPath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[2]/SECTION[2]/DIV[2]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]"
-        },
-        {
-        "label": "css-dvua67-singleValue",
-        "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[2]/SECTION[2]/DIV[2]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]",
-        "event": "click"
-        },
-        {
-        "type": "select",
-        "value": "2520",
-        "label": "select-Agent",
-        "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[2]/SECTION[2]/DIV[2]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/INPUT[1]",
-        "containerXPath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[2]/SECTION[2]/DIV[2]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/DIV[1]"
-        },
-        {
-        "label": "css-1pcexqc-container",
-        "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[2]/SECTION[2]/DIV[2]/DIV[1]/DIV[2]/DIV[1]/DIV[3]/DIV[1]/DIV[1]",
-        "event": "click"
-        },
-        {
-        "waitUntil": 1500,          
-        "type": "select",
-        "value": "305785",
-        "label": "select-Agent Branch",
-        "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[2]/SECTION[2]/DIV[2]/DIV[1]/DIV[2]/DIV[1]/DIV[3]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/INPUT[1]",
-        "containerXPath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[2]/SECTION[2]/DIV[2]/DIV[1]/DIV[2]/DIV[1]/DIV[3]/DIV[1]"
-        },
-        {
-        "type": "text",
-        "value": "testH",
-        "label": "First Name",
-        "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[2]/SECTION[2]/DIV[2]/DIV[2]/DIV[2]/DIV[2]/DIV[2]/DIV[1]/INPUT[1]",
-        "event": "input"
-        },
-        {
-        "type": "text",
-        "value": "test",
-        "label": "Last Name",
-        "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[2]/SECTION[2]/DIV[2]/DIV[2]/DIV[2]/DIV[2]/DIV[3]/DIV[1]/INPUT[1]",
-        "event": "input"
-        },
-        {
-        "label": "css-1pcexqc-container",
-        "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[2]/SECTION[2]/DIV[2]/DIV[2]/DIV[2]/DIV[3]/DIV[1]/DIV[1]/DIV[1]",
-        "event": "click"
-        },
-        {
-        "type": "select",
-        "value": "94",
-        "label": "select-Nationality",
-        "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[2]/SECTION[2]/DIV[2]/DIV[2]/DIV[2]/DIV[3]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/INPUT[1]",
-        "containerXPath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[2]/SECTION[2]/DIV[2]/DIV[2]/DIV[2]/DIV[3]/DIV[1]/DIV[1]"
-        },
-        {
-        "label": "css-1hwfws3",
-        "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[2]/SECTION[2]/DIV[2]/DIV[2]/DIV[2]/DIV[3]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]",
-        "event": "click"
-        },
-        {
-        "waitUntil": 1500,              
-        "type": "select",
-        "value": "self",
-        "label": "select-Relationship",
-        "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[2]/SECTION[2]/DIV[2]/DIV[2]/DIV[2]/DIV[3]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/INPUT[1]",
-        "containerXPath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[2]/SECTION[2]/DIV[2]/DIV[2]/DIV[2]/DIV[3]/DIV[2]/DIV[1]"
-        },
-        {
-        "label": "css-1hwfws3",
-        "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[2]/SECTION[2]/DIV[2]/DIV[3]/DIV[2]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]",
-        "event": "click"
-        },
-        {
-        "type": "select",
-        "value": "658",
-        "label": "select-State",
-        "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[2]/SECTION[2]/DIV[2]/DIV[3]/DIV[2]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/INPUT[1]",
-        "containerXPath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[2]/SECTION[2]/DIV[2]/DIV[3]/DIV[2]/DIV[1]/DIV[2]/DIV[1]"
-        },
-        {
-        "label": "css-1hwfws3",
-        "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[2]/SECTION[2]/DIV[2]/DIV[3]/DIV[2]/DIV[1]/DIV[3]/DIV[1]/DIV[1]/DIV[1]/DIV[1]",
-        "event": "click"
-        },
-        {
-        "waitUntil": 1500,          
-        "type": "select",
-        "value": "7661",
-        "label": "select-District",
-        "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[2]/SECTION[2]/DIV[2]/DIV[3]/DIV[2]/DIV[1]/DIV[3]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/INPUT[1]",
-        "containerXPath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[2]/SECTION[2]/DIV[2]/DIV[3]/DIV[2]/DIV[1]/DIV[3]/DIV[1]"
-        },
-        {
-        "type": "text",
-        "value": "6546546546",
-        "label": "Mobile Number",
-        "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[2]/SECTION[2]/DIV[2]/DIV[3]/DIV[2]/DIV[1]/DIV[5]/DIV[1]/INPUT[1]",
-        "event": "input"
-        },
+     {
+      "type": "select",
+      "value": "2520",
+      "label": "select-Service Provider",
+      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[2]/SECTION[2]/DIV[2]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/INPUT[1]",
+      "containerXPath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[2]/SECTION[2]/DIV[2]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]"
+     },
+     {
+      "waitUntilApi": {
+        "api" : "bene/agent_master/list"
+      }
+     },
+     {
+      "label": "css-1pcexqc-container",
+      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[2]/SECTION[2]/DIV[2]/DIV[1]/DIV[2]/DIV[1]/DIV[3]/DIV[1]/DIV[1]",
+      "event": "click"
+     },
+     {
+      "type": "select",
+      "value": "305785",
+      "label": "select-Agent Branch",
+      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[2]/SECTION[2]/DIV[2]/DIV[1]/DIV[2]/DIV[1]/DIV[3]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/INPUT[1]",
+      "containerXPath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[2]/SECTION[2]/DIV[2]/DIV[1]/DIV[2]/DIV[1]/DIV[3]/DIV[1]"
+     },
+     {
+      "type": "text",
+      "value": "testH",
+      "label": "First Name",
+      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[2]/SECTION[2]/DIV[2]/DIV[2]/DIV[2]/DIV[2]/DIV[2]/DIV[1]/INPUT[1]",
+      "event": "input"
+     },
+     {
+      "type": "text",
+      "value": "test",
+      "label": "Last Name",
+      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[2]/SECTION[2]/DIV[2]/DIV[2]/DIV[2]/DIV[2]/DIV[3]/DIV[1]/INPUT[1]",
+      "event": "input"
+     },
+     {
+      "label": "css-1pcexqc-container",
+      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[2]/SECTION[2]/DIV[2]/DIV[2]/DIV[2]/DIV[3]/DIV[1]/DIV[1]/DIV[1]",
+      "event": "click"
+     },
+     {
+      "type": "select",
+      "value": "94",
+      "label": "select-Nationality",
+      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[2]/SECTION[2]/DIV[2]/DIV[2]/DIV[2]/DIV[3]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/INPUT[1]",
+      "containerXPath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[2]/SECTION[2]/DIV[2]/DIV[2]/DIV[2]/DIV[3]/DIV[1]/DIV[1]"
+     },
+     {
+      "waitUntilApi": {
+        "api" : "remitt/customer_bank/relations"
+      }
+     },
+     {
+      "label": "css-1hwfws3",
+      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[2]/SECTION[2]/DIV[2]/DIV[2]/DIV[2]/DIV[3]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]",
+      "event": "click"
+     },
+     {
+      "type": "select",
+      "value": "self",
+      "label": "select-Relationship",
+      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[2]/SECTION[2]/DIV[2]/DIV[2]/DIV[2]/DIV[3]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/INPUT[1]",
+      "containerXPath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[2]/SECTION[2]/DIV[2]/DIV[2]/DIV[2]/DIV[3]/DIV[2]/DIV[1]"
+     },
+     {
+      "label": "css-1hwfws3",
+      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[2]/SECTION[2]/DIV[2]/DIV[3]/DIV[2]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]",
+      "event": "click"
+     },
+     {
+      "type": "select",
+      "value": "658",
+      "label": "select-State",
+      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[2]/SECTION[2]/DIV[2]/DIV[3]/DIV[2]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/INPUT[1]",
+      "containerXPath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[2]/SECTION[2]/DIV[2]/DIV[3]/DIV[2]/DIV[1]/DIV[2]/DIV[1]"
+     },
+     {
+      "waitUntilApi": {
+        "api" : "meta/district/list"
+      }
+     },
+     {
+      "label": "css-1hwfws3",
+      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[2]/SECTION[2]/DIV[2]/DIV[3]/DIV[2]/DIV[1]/DIV[3]/DIV[1]/DIV[1]/DIV[1]/DIV[1]",
+      "event": "click"
+     },
+     {
+      "type": "select",
+      "value": "7661",
+      "label": "select-District",
+      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[2]/SECTION[2]/DIV[2]/DIV[3]/DIV[2]/DIV[1]/DIV[3]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/INPUT[1]",
+      "containerXPath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[2]/SECTION[2]/DIV[2]/DIV[3]/DIV[2]/DIV[1]/DIV[3]/DIV[1]"
+     },
+     {
+      "type": "text",
+      "value": "6546546546",
+      "label": "Mobile Number",
+      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[2]/SECTION[2]/DIV[2]/DIV[3]/DIV[2]/DIV[1]/DIV[5]/DIV[1]/INPUT[1]",
+      "event": "input"
+     },
      {
       "type": "submit",
       "value": "",
       "label": "btn btn-success pull-right",
       "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[2]/SECTION[2]/DIV[4]/BUTTON[2]",
       "event": "click"
-     },
-     {
-        "waitUntil": 5500,
-        "type": "submit",
-        "value": "",
-        "label": "btn btn-primary",
-        "xpath": "/html/body/div[1]/div[1]/div[1]/div[2]/section[2]/div[6]/div[1]/div[1]/div[1]/div[2]/button",
-        "event": "click"
      }
     ]
    }

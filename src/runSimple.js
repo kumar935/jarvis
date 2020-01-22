@@ -11,4 +11,4 @@ let rawdata = fs.readFileSync(__dirname + `/simpleFlows/${flow}.json`);
 let flowData = JSON.parse(rawdata);
 let {XPathValArr, startUrl} = flowData;
 
-runFlow({ XPathValArr, startUrl });
+runFlow({ XPathValArr, startUrl ,flow});
