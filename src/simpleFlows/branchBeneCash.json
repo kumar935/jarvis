@@ -25,6 +25,11 @@
       "event": "click"
      },
      {
+       "type": "otp",
+       "xpath1": "/html/body/div[1]/div[2]/div/div[2]/div[2]/div[1]/div/input",
+       "xpath2": "/html/body/div[1]/div[2]/div/div[2]/div[2]/div[2]/div/input"
+     },
+     {
       "waitUntilElement": {
           "id": "app"
        },
@@ -227,6 +232,11 @@
       "label": "btn btn-success pull-right",
       "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[2]/SECTION[2]/DIV[4]/BUTTON[2]",
       "event": "click"
+     },
+     {
+       "waitUntilApi":{
+         "api":"api/bene/add/cash"
+       }
      }
     ]
    }

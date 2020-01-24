@@ -72,8 +72,8 @@ async function actions({ XPathValArr }) {
     }
 
     if (ele.waitUntilApi) {
-      var temp = ele.waitUntilApi['api']
-      var re = new RegExp(temp, 'g');
+      var apiName = ele.waitUntilApi['api']
+      var re = new RegExp(apiName, 'g');
       var count = (listofJson.match(re) || []).length;
       await new Promise(resolve => {
         if (count % 2 == 0 && count > 1) {
@@ -81,7 +81,7 @@ async function actions({ XPathValArr }) {
         } else {
           setTimeout(() => {
             resolve();
-          }, 2000)
+          }, 3000)
         }
       })
       count = 0;
@@ -90,6 +90,18 @@ async function actions({ XPathValArr }) {
     //select
     if (ele.type == "select") {
       await setSelectVal(ele);
+    }
+
+    //otp
+    if(ele.type == "otp"){
+      try {
+          await browserMain.wait(until.elementIsEnabled(browserMain.findElement({xpath: ele.xpath2})));
+          await new Promise(resolve =>setTimeout(() => {resolve();}, 500));
+          var test = await browserMain.findElement({xpath: ele.xpath1}).getAttribute('value');
+          console.log(test);
+      }catch(error){
+        console.log(error);
+      }
     }
 
     //text
@@ -135,49 +147,14 @@ module.exports.runFlow = ({ browser, XPathValArr, startUrl, flow }) => {
       y = setInterval(get_driver_logs, 500)
 
       await actions({ XPathValArr });
-      if(endofJSON==1){
-        setTimeout(() => {
-          clearInterval(x);
-          clearInterval(y);
-          
-          if (err_message !== "" && typeof error_code !== "undefined") {
-            fs.appendFileSync(browser_log_path, listofJson + "\n" + error_code)
-            fs.appendFileSync(driver_log_path, "\n" + err_message + "\nFlow Incomplete");
-            console.log("Errors in Browser Logs. " + error_code)
-            console.log("\nErrors in Driver Logs. \nFlow Incomplete")
-          }
-    
-          //Errors in Driver:
-          else if (err_message !== "" && typeof error_code == "undefined") {
-            fs.appendFileSync(driver_log_path, "\n" + err_message + "\nFlow Incomplete\n----");
-            console.log("\nFlow Incomplete. Errors in Driver Logs.")
-            fs.appendFileSync(browser_log_path, listofJson + "\nNo Browser error, but Flow Incomplete.")
-    
-          }
-    
-          //Errors in Browser:
-          else if (err_message == "" && typeof error_code !== "undefined") {
-            fs.appendFileSync(browser_log_path, listofJson + "\n" + error_code)
-            fs.appendFileSync(driver_log_path, "\nNo Driver error, but Flow Incomplete.");
-            console.log("Flow Incomplete. Errors in Browser Logs. " + error_code)
-          }
-          else if (err_message == "" && typeof error_code == "undefined"){
-            fs.appendFileSync(browser_log_path, listofJson + "\nFlow Complete")
-            fs.appendFileSync(driver_log_path, "\nFlow Complete");
-            console.log("\nNo Errors. Flow Complete")
-          }
-
-        },1000)
-      
-      }
 
       function get_driver_logs() {
         browser.manage().logs().get('driver').then(function (driver_logs) {
           driver_log_path = logs_loc + '\\' + flow + '_' + timestamp + '_Driver_log.log';
           fs.appendFileSync(driver_log_path, JSON.stringify(driver_logs, 4, 4));
-          for (var temp in driver_logs) {
-            if (JSON.stringify(driver_logs[temp]).indexOf("ERROR") > -1) {
-              err_message += driver_logs[temp]['message']
+          for (var xyz in driver_logs) {
+            if (JSON.stringify(driver_logs[xyz]).indexOf("ERROR") > -1) {
+              err_message += driver_logs[xyz]['message']
             }
           }
         });
@@ -206,9 +183,46 @@ module.exports.runFlow = ({ browser, XPathValArr, startUrl, flow }) => {
               }
             }
           }
+          fs.writeFileSync(browser_log_path, listofJson)
+
         });
       }
 
+      if(endofJSON==1){
+        setTimeout(() => {
+          clearInterval(x);
+          clearInterval(y);
+          
+          //No Errors.
+          if (err_message !== "" && typeof error_code !== "undefined") {
+            fs.appendFileSync(browser_log_path, "\n" + error_code)
+            fs.appendFileSync(driver_log_path, "\n" + err_message + "\nFlow Incomplete");
+            console.log("Errors in Browser Logs. " + error_code)
+            console.log("\nErrors in Driver Logs. \nFlow Incomplete")
+          }
+    
+          //Errors in Driver:
+          else if (err_message !== "" && typeof error_code == "undefined") {
+            fs.appendFileSync(driver_log_path, "\n" + err_message + "\nFlow Incomplete\n----");
+            console.log("\nFlow Incomplete. Errors in Driver Logs.")
+            fs.appendFileSync(browser_log_path, "\nNo Browser error, but Flow Incomplete.")
+          }
+    
+          //Errors in Browser:
+          else if (err_message == "" && typeof error_code !== "undefined") {
+            fs.appendFileSync(browser_log_path, "\n" + error_code)
+            fs.appendFileSync(driver_log_path, "\nNo Driver error, but Flow Incomplete.");
+            console.log("Flow Incomplete. Errors in Browser Logs. " + error_code)
+          }
+
+          //No Errors.
+          else if (err_message == "" && typeof error_code == "undefined"){
+            fs.appendFileSync(browser_log_path, "\nFlow Complete")
+            fs.appendFileSync(driver_log_path, "\nFlow Complete");
+            console.log("\nNo Errors. Flow Complete")
+          }
+        },3000)
+      }
       return browser;
     })
     .catch(err => {
