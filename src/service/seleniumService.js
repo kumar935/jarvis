@@ -105,25 +105,25 @@ async function actions({ XPathValArr }) {
             console.log("otp-prefix not captured. Enter otp manually")
           }
           else{
-          await new Promise(resolve =>setTimeout(() => {resolve();}, 1000));//wait time for slack to get otp
-          let url = "https://slack.com/api/conversations.history?token=xoxb-253198866083-918230041412-I4LosIQcAy8NrNGERitOwKv0&channel=C9AK11W2K&limit=50&pretty=1";
-          const fetch = require("node-fetch");
+            await new Promise(resolve =>setTimeout(() => {resolve();}, 1000));//wait for slack
+            let url = "https://slack.com/api/conversations.history?token=xoxb-253198866083-918230041412-I4LosIQcAy8NrNGERitOwKv0&channel=C9AK11W2K&limit=50&pretty=1";
+            const fetch = require("node-fetch");
 
-          fetch(url)
-              .then(resp => resp.json())
-              .then(data => {{
-                  var test = data['messages']
-                  for (var abc in test) {
-                    if (JSON.stringify(test[abc]).indexOf(otp) > -1) {
-                      var messages = test[abc]
-                      var text = JSON.stringify(messages['attachments'][0]['text'],4,4)
-                      newOTP = (text.substring(text.indexOf(otp) + otp.length+1, text.lastIndexOf(".\"")));
-                    }}               
-                  browserMain
-                    .findElement({ xpath: ele.xpath2 })
-                    .sendKeys(newOTP);
-              }
-      }})
+            fetch(url)
+                .then(resp => resp.json())
+                .then(data => {{
+                    var test = data['messages']
+                    for (var abc in test) {
+                      if (JSON.stringify(test[abc]).indexOf(otp) > -1) {
+                        var messages = test[abc]
+                        var text = JSON.stringify(messages['attachments'][0]['text'],4,4)
+                        newOTP = (text.substring(text.indexOf(otp) + otp.length+1, text.lastIndexOf(".\"")));
+                        console.log("OTP captured: "+otp+"-"+newOTP)
+                      }}               
+                    browserMain
+                      .findElement({ xpath: ele.xpath2 })
+                      .sendKeys(newOTP);
+              }})}
       }catch(error){
         console.log(error);
       }
@@ -246,7 +246,7 @@ module.exports.runFlow = ({ browser, XPathValArr, startUrl, flow }) => {
             fs.appendFileSync(driver_log_path, "\nFlow Complete");
             console.log("\nNo Errors. Flow Complete")
           }
-        },5000)
+        },3000)
       }
       return browser;
     })
