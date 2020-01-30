@@ -30,6 +30,14 @@
        "xpath2": "/html/body/div[1]/div[2]/div/div[2]/div[2]/div[2]/div/input"
      },
      {
+       "waitUntil": 500,
+       "type": "submit",
+       "value": "",
+       "label": "button",
+       "xpath": "/html/body/div[1]/div[2]/div/div[4]/div[2]/div",
+       "event": "click"
+     },
+     {
       "waitUntilElement": {
           "id": "app"
        },
