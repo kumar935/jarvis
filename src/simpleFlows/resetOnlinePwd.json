@@ -1,0 +1,64 @@
+{
+  "startUrl": "https://appd2-kwt.amxremit.com",
+  "XPathValArr": [
+    {
+      "type": "text",
+      "value": "284052306594",
+      "label": "INPUT",
+      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/INPUT[1]",
+      "event": "input"
+    },
+    {
+      "type": "text",
+      "value": "Amx@1234",
+      "label": "INPUT",
+      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/INPUT[1]",
+      "event": "input"
+    },
+    {
+      "type": "submit",
+      "value": "",
+      "label": "button ripple",
+      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[3]/BUTTON[1]",
+      "event": "click"
+    },
+    {
+      "waitUntil": 500,
+      "type": "",
+      "value": "https://appd2-kwt.amxremit.com/app/myaccount/change-password",
+      "label": "sidebar-item true",
+      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[3]/DIV[1]/UL[1]/A[4]",
+      "event": "link"
+    },
+    {
+      "waitUntil": 500,
+      "type": "text",
+      "value": "Amx@1234",
+      "label": "INPUT",
+      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[3]/DIV[2]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/INPUT[1]",
+      "event": "input"
+    },
+    {
+      "type": "text",
+      "value": "Amx@1234",
+      "label": "INPUT",
+      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[3]/DIV[2]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/INPUT[1]",
+      "event": "input"
+    },
+    {
+      "type": "submit",
+      "value": "",
+      "label": "button ripple",
+      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[3]/DIV[2]/DIV[2]/BUTTON[2]",
+      "event": "click"
+    },
+    {
+      "waitUntil": 10000,
+      "type": "submit",
+      "value": "",
+      "label": "button ripple",
+      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[3]/BUTTON[3]",
+      "event": "click"
+    }
+  ]
+}

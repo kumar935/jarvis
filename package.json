@@ -7,13 +7,21 @@
   "license": "MIT",
   "scripts": {
     "flow": "node src/run.js",
-    "simpleFlow": "node src/runSimple.js"
+    "simpleFlow": "node src/runSimple.js",
+    "customFlow": "node src/runCustom.js",
+    "build": "node scripts/buildRecorder.js",
+    "mocha": "mocha"
   },
   "dependencies": {
-    "selenium-webdriver": "^4.0.0-alpha.4",
     "chromedriver": "^78.0.1",
-    "geckodriver": "^1.16.2"
+    "geckodriver": "^1.16.2",
+    "log-to-file": "^2.0.2",
+    "selenium-webdriver": "^4.0.0-alpha.4"
   },
   "devDependencies": {
+    "aws-sdk": "^2.610.0",
+    "chai": "^4.2.0",
+    "mocha": "^7.0.1",
+    "node-fetch": "^2.6.0"
   }
 }

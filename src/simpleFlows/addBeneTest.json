@@ -3,7 +3,7 @@
     "XPathValArr": [
      {
       "type": "text",
-      "value": "289072104474",
+      "value": "284052306594",
       "label": "INPUT",
       "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/INPUT[1]",
       "event": "input"
@@ -20,6 +20,14 @@
       "value": "",
       "label": "button ripple",
       "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[3]/BUTTON[1]",
+      "event": "click"
+     },
+     {
+      "waitUntil": 500,
+      "type": "submit",
+      "value": "",
+      "label": "button ripple",
+      "xpath": "/html/body/div/div/div[2]/div/div[1]",
       "event": "click"
      },
      {
@@ -172,7 +180,7 @@
       "event": "click"
      },
      {
-      "waitUntil": 20000,      
+      "waitUntil": 2000,      
       "type": "submit",
       "value": "",
       "label": "button ripple",
