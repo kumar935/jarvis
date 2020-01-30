@@ -36,7 +36,6 @@ describe('Testing Basic Login', function() {
         let tabsDiv = await driver.findElement({ className: "tabs" });
         let firstTab = tabsDiv.findElement({ tagName: "a" })
         let firstTabHref = await firstTab.getAttribute("href")
-        console.log('logging firstTabHref: ', firstTabHref);
 
 
         let userDiv = await driver.findElement({ className: "user-name" });
