@@ -1,0 +1,26 @@
+{
+    "startUrl": "https://appd2-kwt.amxremit.com/login",
+    "XPathValArr": [
+     {
+      "type": "text",
+      "value": "284052306594",
+      "label": "INPUT",
+      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/INPUT[1]",
+      "event": "input"
+     },
+     {
+      "type": "text",
+      "value": "Amx@1234",
+      "label": "INPUT",
+      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/INPUT[1]",
+      "event": "input"
+     },
+     {
+      "type": "submit",
+      "value": "",
+      "label": "button ripple",
+      "xpath": "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[3]/BUTTON[1]",
+      "event": "click"
+     }
+    ]
+   }

@@ -115,11 +115,12 @@ async function actions({ XPathValArr }) {
             await new Promise(resolve =>setTimeout(() => {resolve();}, 1000));//wait for slack
             let url = "https://slack.com/api/conversations.history?token=xoxb-253198866083-918230041412-I4LosIQcAy8NrNGERitOwKv0&channel=C9AK11W2K&limit=50&pretty=1";
             const fetch = require("node-fetch");
-
+            let newOTP = "0";
             fetch(url)
                 .then(resp => resp.json())
                 .then(data => {{
-                    var test = data['messages']
+                    var test = data['messages'];
+                    console.log(data);
                     for (var abc in test) {
                       if (JSON.stringify(test[abc]).indexOf(otp) > -1) {
                         var messages = test[abc]
@@ -208,10 +209,8 @@ const runFlow = async({ browser, XPathValArr, startUrl, flow }) => {
   try {
     await browser.get(url);
     initLogs();
-    console.log("selenium service 1");
     await actions({ XPathValArr });
     printFinalLogs();
-    console.log("selenium service 2");
     return browser;
   } catch (error) {
     
