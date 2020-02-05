@@ -53,7 +53,13 @@
       "event": "click"
     },
     {
-      "waitUntil": 10000,
+      "waitUntil": 3000,
+      "type": "otp",
+      "xpath1": "/html/body/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/INPUT[1]",
+      "xpath2": "/html/body/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/INPUT[1]"
+    },
+    {
+      "waitUntil": 500,
       "type": "submit",
       "value": "",
       "label": "button ripple",

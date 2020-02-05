@@ -7,6 +7,8 @@ const { getFlowData } = require("../service/utils");
 chrome.setDefaultService(new chrome.ServiceBuilder(chromedriver.path).build());
 require("geckodriver");
 const defaultUrl = "https://appd3-kwt.amxremit.com/login";
+let token = `xoxb-253198866083-918230041412-AOB79C4XFtc2CTQbqtcTP6pB`;
+let slackUrl = `https://slack.com/api/conversations.history?token=${token}&channel=C9AK11W2K&limit=50&pretty=1`;
 
 var fs = require("fs");
 var logs_loc = process.cwd() + "/logs";
@@ -106,6 +108,7 @@ async function actions({ XPathValArr }) {
           await browserMain.wait(until.elementIsEnabled(browserMain.findElement({xpath: ele.xpath2})));
           await new Promise(resolve =>setTimeout(() => {resolve();}, 2000));
           var otp = await browserMain.findElement({xpath: ele.xpath1}).getAttribute('value');
+          otp = otp.replace("-", "");
           console.log(otp);
           if(otp == ""){
             otp = "Invalid";
@@ -113,21 +116,22 @@ async function actions({ XPathValArr }) {
           }
           else{
             await new Promise(resolve =>setTimeout(() => {resolve();}, 1000));//wait for slack
-            let url = "https://slack.com/api/conversations.history?token=xoxb-253198866083-918230041412-I4LosIQcAy8NrNGERitOwKv0&channel=C9AK11W2K&limit=50&pretty=1";
+            // let url = "https://slack.com/api/conversations.history?token=xoxb-253198866083-918230041412-I4LosIQcAy8NrNGERitOwKv0&channel=C9AK11W2K&limit=50&pretty=1";
             const fetch = require("node-fetch");
             let newOTP = "0";
-            fetch(url)
+            fetch(slackUrl)
                 .then(resp => resp.json())
                 .then(data => {{
                     var test = data['messages'];
-                    console.log(data);
+                    // console.log(data);
                     for (var abc in test) {
                       if (JSON.stringify(test[abc]).indexOf(otp) > -1) {
                         var messages = test[abc]
                         var text = JSON.stringify(messages['attachments'][0]['text'],4,4)
                         newOTP = (text.substring(text.indexOf(otp) + otp.length+1, text.lastIndexOf(".\"")));
                         console.log("OTP captured: "+otp+"-"+newOTP)
-                      }}               
+                      }
+                    }               
                     browserMain
                       .findElement({ xpath: ele.xpath2 })
                       .sendKeys(newOTP);
