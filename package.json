@@ -7,6 +7,7 @@
   "license": "MIT",
   "scripts": {
     "flow": "node src/run.js",
+    "test": "mocha",
     "simpleFlow": "node src/runSimple.js",
     "customFlow": "node src/runCustom.js",
     "build": "node scripts/buildRecorder.js",

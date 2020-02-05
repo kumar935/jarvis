@@ -23,7 +23,7 @@
       "event": "click"
     },
     {
-      "waitUntil": 500,
+      "waitUntil": 1900,
       "type": "",
       "value": "https://appd2-kwt.amxremit.com/app/myaccount/change-password",
       "label": "sidebar-item true",
@@ -31,7 +31,7 @@
       "event": "link"
     },
     {
-      "waitUntil": 500,
+      "waitUntil": 1900,
       "type": "text",
       "value": "Amx@1234",
       "label": "INPUT",
