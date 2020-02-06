@@ -4,6 +4,7 @@ var { Builder, By, Key, until } = webdriver;
 var chrome = require("selenium-webdriver/chrome");
 var chromedriver = require("chromedriver");
 const { getFlowData } = require("../service/utils");
+const { readCSV } = require("../utils/readCSV");
 chrome.setDefaultService(new chrome.ServiceBuilder(chromedriver.path).build());
 require("geckodriver");
 const defaultUrl = "https://appd3-kwt.amxremit.com/login";
@@ -225,6 +226,38 @@ module.exports.runSimpleFlow = async flowName => {
   let flowData = getFlowData(flowName);
   let { XPathValArr, startUrl } = flowData;
   return await runFlow({ XPathValArr, startUrl });
+};
+
+function getXPathValArrWithTestCase(XPathValArr, testCaseObj) {
+  return XPathValArr.map(item => {
+    if(item.id && testCaseObj[item.id]){
+      item.value = testCaseObj[item.id];
+    }
+    return item;
+  })
+}
+
+module.exports.runFlowWithTestCases = async (flowName, index = null) => {
+  console.log(flowName);
+  let flowData = getFlowData(flowName);
+  let testCases = await readCSV(flowName);
+  let testCasesCount = testCases.length;
+  
+  let { XPathValArr, startUrl } = flowData;
+
+  if(index !== null){
+    let newXPathValArr = getXPathValArrWithTestCase(XPathValArr, testCases[index]);
+    return await runFlow({ XPathValArr: newXPathValArr, startUrl });
+  }
+
+  for(let testCaseIndex = 0; testCaseIndex < testCasesCount; testCaseIndex++){
+    let newXPathValArr = getXPathValArrWithTestCase(XPathValArr, testCases[testCaseIndex]);
+    await runFlow({ XPathValArr: newXPathValArr, startUrl });
+  }
+
+  return browserMain;
+
+  // return await runFlow({ XPathValArr, startUrl });
 };
 
 function ensureDirectoryExistence(filePath) {
