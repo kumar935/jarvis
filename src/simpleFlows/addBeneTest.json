@@ -176,6 +176,7 @@
       "event": "input"
      },
      {
+      "id":"sendOtpClickDisable",
       "type": "submit",
       "value": "",
       "label": "button ripple",

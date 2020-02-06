@@ -1,4 +1,4 @@
-"firstName","secondName","phoneNo"
-"name11","name21","1231231"
-"name12","name22","1231232"
-"name13","name23","1231233"
+"firstName","secondName","phoneNo","sendOtpClickDisable"
+"name11","name21","1231231",true
+"name12","name22","1231232",true
+"TestE","Test","9876549879",false

@@ -152,9 +152,12 @@ async function actions({ XPathValArr }) {
     }
 
     if (ele.event == "click") {
-      try {
-        await browserMain.findElement({ xpath: ele.xpath }).click();
-      } catch (error) {}
+      console.log('logging ele.disable, ele.id: ', ele.disable, " ", ele.id);
+      if(ele.disable !== 'true'){
+        try {
+          await browserMain.findElement({ xpath: ele.xpath }).click();
+        } catch (error) {}
+      }
     }
 
     if (ele.event == "link") {
@@ -231,6 +234,9 @@ module.exports.runSimpleFlow = async flowName => {
 function getXPathValArrWithTestCase(XPathValArr, testCaseObj) {
   return XPathValArr.map(item => {
     if(item.id && testCaseObj[item.id]){
+      if(item.event === "click"){
+        item.disable = testCaseObj[item.id];
+      }
       item.value = testCaseObj[item.id];
     }
     return item;
