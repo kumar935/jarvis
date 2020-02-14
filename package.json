@@ -12,7 +12,8 @@
     "customFlow": "node src/runCustom.js",
     "testFlow": "node src/runWithTestCases.js",
     "build": "node scripts/buildRecorder.js",
-    "mocha": "mocha"
+    "mocha": "mocha",
+    "testLogin": "yarn run mocha src/customFlows/loginTest.js"
   },
   "dependencies": {
     "chromedriver": "^78.0.1",

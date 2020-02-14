@@ -15,7 +15,7 @@ let pwdXpath = "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[
 // let password = "Amx@1234"
 let loginBtnXpath = "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[3]/BUTTON[1]";
 
-describe('Testing Basic Login', function() {
+describe(`Testing Basic Login, TS: ${+new Date()}, DateTime: ${new Date()}`, function() {
     before(async function() {
       // runs before all tests in this block
       
