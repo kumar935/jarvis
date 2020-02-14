@@ -3,7 +3,7 @@ var parse = require("csv-parse");
 
 const readCSV = (simpleFlow) => {
   let inputPath = `./src/testCases/${simpleFlow}.csv`;
-  console.log(inputPath);
+  // console.log(inputPath);
   return new Promise(resolve => {
     fs.readFile(inputPath, function(err, fileData) {
       parse(fileData, { columns: false, trim: true }, function(err, rows) {
@@ -24,7 +24,7 @@ const readCSV = (simpleFlow) => {
 };
 
 readCSV('addBeneTest').then(rows => {
-    console.log(rows);
+    // console.log(rows);
 })
 
 module.exports.readCSV = readCSV;

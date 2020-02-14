@@ -152,7 +152,7 @@ async function actions({ XPathValArr }) {
     }
 
     if (ele.event == "click") {
-      console.log('logging ele.disable, ele.id: ', ele.disable, " ", ele.id);
+      // console.log('logging ele.disable, ele.id: ', ele.disable, " ", ele.id);
       if(ele.disable !== 'true'){
         try {
           await browserMain.findElement({ xpath: ele.xpath }).click();
