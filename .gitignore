@@ -14,3 +14,4 @@ dist
 yarn-error.log
 lerna-debug.log
 .vscode
+config/vars.js
