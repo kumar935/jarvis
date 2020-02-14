@@ -31,7 +31,7 @@ describe('Testing Basic Login', function() {
         this.timeout(60000 * 10);
         driver = await runSimpleFlow("onlineLoginTest");
 
-        await new Promise(resolve => setTimeout(resolve, 1000));
+        await new Promise(resolve => setTimeout(resolve, 2000));
 
         let tabsDiv = await driver.findElement({ className: "tabs" });
         let firstTab = tabsDiv.findElement({ tagName: "a" })
