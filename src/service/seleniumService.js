@@ -225,9 +225,10 @@ const runFlow = async({ browser, XPathValArr, startUrl, flow }) => {
   }
 }
 
-module.exports.runSimpleFlow = async flowName => {
+module.exports.runSimpleFlow = async (flowName, startUrlParam) => {
   let flowData = getFlowData(flowName);
   let { XPathValArr, startUrl } = flowData;
+  startUrl = startUrlParam || startUrl;
   return await runFlow({ XPathValArr, startUrl });
 };
 

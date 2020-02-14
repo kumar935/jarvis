@@ -6,6 +6,14 @@ var {expect} = require('chai');
 
 let driver;
 
+var {url, civilId, password} = require("../../config/vars");
+
+// let url = "https://appb-kwt.almullaexchange.com/login";
+let civilIdInputXpath = "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/INPUT[1]";
+// let civilId = "284052306594";
+let pwdXpath = "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/INPUT[1]";
+// let password = "Amx@1234"
+let loginBtnXpath = "/html/body/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[3]/BUTTON[1]";
 
 describe('Testing Basic Login', function() {
     before(async function() {
@@ -29,9 +37,19 @@ describe('Testing Basic Login', function() {
     // test cases
     it( 'Login Test' , async function(){
         this.timeout(60000 * 10);
-        driver = await runSimpleFlow("onlineLoginTest");
-
+        driver = await runSimpleFlow("onlineUrl", url);
         await new Promise(resolve => setTimeout(resolve, 2000));
+        await driver
+          .findElement({ xpath: civilIdInputXpath })
+          .sendKeys(civilId);
+        
+        await driver
+          .findElement({ xpath: pwdXpath })
+          .sendKeys(password);
+        
+        await driver.findElement({ xpath: loginBtnXpath }).click();
+
+        await new Promise(resolve => setTimeout(resolve, 3000));
 
         let tabsDiv = await driver.findElement({ className: "tabs" });
         let firstTab = tabsDiv.findElement({ tagName: "a" })
