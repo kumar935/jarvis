@@ -12,7 +12,7 @@ While using selenium, it's pretty tedious to go through the DOM and pick the xpa
 ```json
 {
   "type": "text",
-  "value": "K",
+  "value": "Some value",
   "label": "form-control",
   "xpath": "/html/body/DIV[1]/DIV[2]/DIV[2]/FORM[1]/DIV[1]/DIV[1]/INPUT[1]",
   "event": "input"
@@ -20,7 +20,7 @@ While using selenium, it's pretty tedious to go through the DOM and pick the xpa
 {
   "waitUntil": 200,  
   "type": "text",
-  "value": "A",
+  "value": "that was",
   "label": "form-control",
   "xpath": "/html/body/DIV[1]/DIV[2]/DIV[2]/FORM[1]/DIV[1]/DIV[2]/INPUT[1]",
   "event": "input"
@@ -30,7 +30,7 @@ While using selenium, it's pretty tedious to go through the DOM and pick the xpa
     "id": "someIdToWaitForBeforeThisStepHappens"  
   },
   "type": "text",
-  "value": "k",
+  "value": "typed",
   "label": "form-control",
   "xpath": "/html/body/DIV[1]/DIV[2]/DIV[2]/FORM[1]/DIV[2]/DIV[1]/INPUT[1]",
   "event": "input"
@@ -101,8 +101,8 @@ describe("hooks", function() {
 
 ### Commands
 
-- to record a flow from a website run `yarn run record {website url}`
-- to run a simple flow from json files for example `branchLogin` use: `npm run simpleFlow branchLogin`.
+- to record a flow from a website run `yarn run record {website url}` (Currently only works for single page applications)
+- to run a simple flow from json files for example `branchLogin` use: `npm run simpleFlow branchLogin`. 
 - to run a custom test case `yarn run mocha path/to/testcase.js`
 
 
