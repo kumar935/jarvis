@@ -1,10 +1,9 @@
 const AWS = require("aws-sdk");
 const fs = require("fs");
 const path = require("path");
+const {ID, SECRET} = require("../config/awsKeys");
 
 // Enter copied or downloaded access ID and secret key here
-const ID = "AKIAJ7QMYBC54S76TJTQ";
-const SECRET = "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";
 
 // The name of the bucket that you have created
 const BUCKET_NAME = "doubular";
