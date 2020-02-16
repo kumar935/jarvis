@@ -101,7 +101,7 @@ describe("hooks", function() {
 
 ### Commands
 
-- to record a flow from a website run `yarn run record {website url}` (Currently only works for single page applications)
+- to record a flow from a website run `yarn run record {website url}` (Currently only works for single page applications or if the flow is limited to the initial URL)
 - to run a simple flow from json files for example `branchLogin` use: `npm run simpleFlow branchLogin`. 
 - to run a custom test case `yarn run mocha path/to/testcase.js`
 
