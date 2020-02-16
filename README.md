@@ -48,7 +48,7 @@ After setup is done, run the following command `yarn run record`. This will take
 - Create a new json file inside the `simpleFlows` folder in the project and paste it.
 - To re run this flow run this command `yarn run simpleFlow {nameOfJsonFile}`
 
-> There is already a saved flow for the bootstrap form you can simple run it using yarn run simpleFlow bootstrapEx.
+> There is already a saved flow for the bootstrap form you can simple run it using `yarn run simpleFlow bootstrapEx`.
 
 
 ### Prerequisites
