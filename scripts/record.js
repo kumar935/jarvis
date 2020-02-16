@@ -3,7 +3,7 @@ var { Builder, By, Key, until } = webdriver;
 var chrome = require("selenium-webdriver/chrome");
 var chromedriver = require("chromedriver");
 
-let url = "https://www.google.com";
+let url = "https://getbootstrap.com/docs/4.0/examples/checkout/";
 
 var browser = new webdriver.Builder()
   .usingServer()
@@ -21,14 +21,13 @@ browser
         script.onload = function(){
             // remote script has loaded
         };
-        script.src = 'https://cdnb-kwt.almullaexchange.com/envf/owa-branch/dist/main.bundle.js';
+        script.src = 'https://doubular.s3.amazonaws.com/friday.js';
         d.getElementsByTagName('head')[0].appendChild(script);
       }(document));
       `);
     } catch (error) {
       console.error("error in setting loc storage: ", error);
     }
-    await actions({ XPathValArr });
     return browser;
   })
   .catch(err => {

@@ -1,0 +1,121 @@
+{
+    "startUrl": "https://getbootstrap.com/docs/4.0/examples/checkout/",
+    "XPathValArr": [
+     {
+      "type": "text",
+      "value": "K",
+      "label": "form-control",
+      "xpath": "/html/body/DIV[1]/DIV[2]/DIV[2]/FORM[1]/DIV[1]/DIV[1]/INPUT[1]",
+      "event": "input"
+     },
+     {
+      "type": "text",
+      "value": "A",
+      "label": "form-control",
+      "xpath": "/html/body/DIV[1]/DIV[2]/DIV[2]/FORM[1]/DIV[1]/DIV[2]/INPUT[1]",
+      "event": "input"
+     },
+     {
+      "type": "text",
+      "value": "k",
+      "label": "form-control",
+      "xpath": "/html/body/DIV[1]/DIV[2]/DIV[2]/FORM[1]/DIV[2]/DIV[1]/INPUT[1]",
+      "event": "input"
+     },
+     {
+      "type": "email",
+      "value": "k@b.c",
+      "label": "form-control",
+      "xpath": "/html/body/DIV[1]/DIV[2]/DIV[2]/FORM[1]/DIV[3]/INPUT[1]",
+      "event": "input"
+     },
+     {
+      "type": "text",
+      "value": "123123123",
+      "label": "form-control",
+      "xpath": "/html/body/DIV[1]/DIV[2]/DIV[2]/FORM[1]/DIV[4]/INPUT[1]",
+      "event": "input"
+     },
+     {
+      "type": "text",
+      "value": "123123",
+      "label": "form-control",
+      "xpath": "/html/body/DIV[1]/DIV[2]/DIV[2]/FORM[1]/DIV[5]/INPUT[1]",
+      "event": "input"
+     },
+     {
+      "type": "nativeSelect",
+      "value": "United States",
+      "label": "custom-select d-block w-100",
+      "xpath": "/html/body/DIV[1]/DIV[2]/DIV[2]/FORM[1]/DIV[6]/DIV[1]/SELECT[1]",
+      "event": "change"
+     },
+     {
+      "type": "nativeSelect",
+      "value": "California",
+      "label": "custom-select d-block w-100",
+      "xpath": "/html/body/DIV[1]/DIV[2]/DIV[2]/FORM[1]/DIV[6]/DIV[2]/SELECT[1]",
+      "event": "change"
+     },
+     {
+      "type": "text",
+      "value": "123123",
+      "label": "form-control",
+      "xpath": "/html/body/DIV[1]/DIV[2]/DIV[2]/FORM[1]/DIV[6]/DIV[3]/INPUT[1]",
+      "event": "input"
+     },
+     {
+      "type": "checkbox",
+      "value": "on",
+      "label": "custom-control-input",
+      "xpath": "/html/body/DIV[1]/DIV[2]/DIV[2]/FORM[1]/DIV[7]/INPUT[1]",
+      "event": "click"
+     },
+     {
+      "type": "radio",
+      "value": "on",
+      "label": "paymentMethod",
+      "xpath": "/html/body/DIV[1]/DIV[2]/DIV[2]/FORM[1]/DIV[9]/DIV[2]/INPUT[1]",
+      "event": "click"
+     },
+     {
+      "label": "bg-light",
+      "xpath": "/html/body"
+     },
+     {
+      "type": "text",
+      "value": "1231231",
+      "label": "form-control",
+      "xpath": "/html/body/DIV[1]/DIV[2]/DIV[2]/FORM[1]/DIV[10]/DIV[1]/INPUT[1]",
+      "event": "input"
+     },
+     {
+      "type": "text",
+      "value": "sadfa",
+      "label": "form-control",
+      "xpath": "/html/body/DIV[1]/DIV[2]/DIV[2]/FORM[1]/DIV[10]/DIV[2]/INPUT[1]",
+      "event": "input"
+     },
+     {
+      "type": "text",
+      "value": "23123",
+      "label": "form-control",
+      "xpath": "/html/body/DIV[1]/DIV[2]/DIV[2]/FORM[1]/DIV[11]/DIV[1]/INPUT[1]",
+      "event": "input"
+     },
+     {
+      "type": "text",
+      "value": "12312",
+      "label": "form-control",
+      "xpath": "/html/body/DIV[1]/DIV[2]/DIV[2]/FORM[1]/DIV[11]/DIV[2]/INPUT[1]",
+      "event": "input"
+     },
+     {
+      "type": "text",
+      "value": "123213",
+      "label": "form-control",
+      "xpath": "/html/body/DIV[1]/DIV[2]/DIV[1]/FORM[1]/DIV[1]/INPUT[1]",
+      "event": "input"
+     }
+    ]
+   }

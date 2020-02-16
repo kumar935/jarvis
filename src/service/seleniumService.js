@@ -103,6 +103,11 @@ async function actions({ XPathValArr }) {
       await setSelectVal(ele);
     }
 
+    if (ele.type == "nativeSelect") {
+      let selectInt = await browserMain.findElement({ xpath: ele.xpath });
+      selectInt.sendKeys(ele.value)
+    }
+
     //otp
     if (ele.type == "otp") {
       try {
@@ -143,7 +148,7 @@ async function actions({ XPathValArr }) {
     }
 
     //text
-    if (ele.type == "text") {
+    if (ele.type == "text" || ele.type === "email" || ele.type === "password") {
       try {
         await browserMain
           .findElement({ xpath: ele.xpath })
