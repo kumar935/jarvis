@@ -9,6 +9,7 @@
     "flow": "node src/run.js",
     "test": "mocha",
     "simpleFlow": "node src/runSimple.js",
+    "record": "node scripts/record.js",
     "customFlow": "node src/runCustom.js",
     "testFlow": "node src/runWithTestCases.js",
     "build": "node scripts/buildRecorder.js",

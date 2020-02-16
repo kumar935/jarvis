@@ -2,8 +2,10 @@ var webdriver = require("selenium-webdriver");
 var { Builder, By, Key, until } = webdriver;
 var chrome = require("selenium-webdriver/chrome");
 var chromedriver = require("chromedriver");
+var args = process.argv.slice(2);
+var urlArg = args[0];
 
-let url = "https://getbootstrap.com/docs/4.0/examples/checkout/";
+let url = urlArg || "https://getbootstrap.com/docs/4.0/examples/checkout/";
 
 var browser = new webdriver.Builder()
   .usingServer()
