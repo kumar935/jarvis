@@ -4,29 +4,20 @@ var chrome = require("selenium-webdriver/chrome");
 var chromedriver = require("chromedriver");
 var args = process.argv.slice(2);
 var urlArg = args[0];
-
+const fs = require('fs');
+const path = require('path');
 let url = urlArg || "https://getbootstrap.com/docs/4.0/examples/checkout/";
 
 var browser = new webdriver.Builder()
   .usingServer()
   .withCapabilities({ browserName: "chrome" })
   .build();
-
+var fridayStr = fs.readFileSync(path.resolve(__dirname, '../src/friday/friday.js'), 'utf8')
 browser
   .get(url)
   .then(async () => {
     try {
-      browser.executeScript(`
-      (function(d, script) {
-        script = d.createElement('script');
-        script.type = 'text/javascript';
-        script.onload = function(){
-            // remote script has loaded
-        };
-        script.src = 'https://doubular.s3.amazonaws.com/friday.js';
-        d.getElementsByTagName('head')[0].appendChild(script);
-      }(document));
-      `);
+      browser.executeScript(fridayStr);
     } catch (error) {
       console.error("error in setting loc storage: ", error);
     }
